@@ -1,378 +1,1017 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shop Wireframe</title>
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Economica:wght@400;700&display=swap" rel="stylesheet" />
-<style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Song Garden</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Economica:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
-  body {
-    font-family: Georgia, 'Times New Roman', serif;
-    background: rgb(231, 227, 215);
-    color: #2c1810;
-    min-height: 100vh;
-  }
+      body {
+        font-family: Georgia, "Times New Roman", serif;
+        background: rgb(231, 227, 215);
+        color: #2c1810;
+        min-height: 100vh;
+      }
 
-  /* ── Header ── */
-  header {
-    background: linear-gradient(135deg, #fee389 0%, #fad7d7 100%);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    padding: 2rem 1rem 1.5rem;
-  }
+      /* ── Header ── */
+      header {
+        background: linear-gradient(135deg, #fee389 0%, #fad7d7 100%);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        padding: 2rem 1rem 1.5rem;
+      }
 
-  .shop-name {
-    font-family: Georgia, 'Times New Roman', serif;
-    font-size: 2.5rem;
-    font-weight: normal;
-    letter-spacing: 2px;
-    color: #996f05;
-    text-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.25);
-  }
+      .shop-name {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 2.5rem;
+        font-weight: normal;
+        letter-spacing: 2px;
+        color: #996f05;
+        text-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.25);
+      }
 
-  .shop-tagline {
-    font-family: 'Economica', sans-serif;
-    font-size: 1rem;
-    letter-spacing: 3px;
-    color: #654901;
-    font-style: italic;
-    margin-top: 6px;
-  }
+      .shop-tagline {
+        font-family: "Economica", sans-serif;
+        font-size: 1rem;
+        letter-spacing: 3px;
+        color: #654901;
+        font-style: italic;
+        margin-top: 6px;
+      }
 
-  /* ── Nav ── */
-  nav {
-    background: rgb(247, 226, 181);
-    box-shadow: 0 0.15rem 0.5rem rgba(0, 0, 0, 0.15);
-    display: flex;
-    justify-content: center;
-    gap: 0;
-    padding: 0.5rem 1rem;
-  }
+      /* ── Nav ── */
+      nav {
+        background: rgb(247, 226, 181);
+        box-shadow: 0 0.15rem 0.5rem rgba(0, 0, 0, 0.15);
+        display: flex;
+        justify-content: center;
+        gap: 0;
+        padding: 0.5rem 1rem;
+      }
 
-  .nav-inner {
-    display: inline-flex;
-    gap: 0.25rem;
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px);
-    border-radius: 25px;
-    padding: 0.4rem 1.25rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(245, 216, 0, 0.3);
-  }
+      .nav-inner {
+        display: inline-flex;
+        gap: 0.25rem;
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
+        border-radius: 25px;
+        padding: 0.4rem 1.25rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(245, 216, 0, 0.3);
+      }
 
-  nav a {
-    font-family: 'Economica', sans-serif;
-    font-size: 1.1rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-decoration: none;
-    color: #7a5800;
-    padding: 0.4rem 1rem;
-    border-radius: 15px;
-    transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
-    text-shadow: 0.08rem 0.08rem 0.08rem rgba(0, 0, 0, 0.15);
-    display: block;
-  }
+      nav a {
+        font-family: "Economica", sans-serif;
+        font-size: 1.1rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-decoration: none;
+        color: #7a5800;
+        padding: 0.4rem 1rem;
+        border-radius: 15px;
+        transition:
+          background 0.2s ease,
+          color 0.2s ease,
+          transform 0.2s ease;
+        text-shadow: 0.08rem 0.08rem 0.08rem rgba(0, 0, 0, 0.15);
+        display: block;
+      }
 
-  nav a:hover {
-    background: linear-gradient(135deg, #fff3b8 0%, #ffeb3b 100%);
-    color: #2c1810;
-    transform: translateY(-2px);
-  }
+      nav a:hover {
+        background: linear-gradient(135deg, #fff3b8 0%, #ffeb3b 100%);
+        color: #2c1810;
+        transform: translateY(-2px);
+      }
 
-  nav a.active {
-    color: #2c1810;
-    background: rgba(245, 216, 0, 0.2);
-  }
+      nav a.active {
+        color: #2c1810;
+        background: rgba(245, 216, 0, 0.2);
+      }
 
-  /* ── Main / Grid ── */
-  main {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 2rem 1.5rem 3rem;
-  }
+      /* ── Main / Grid ── */
+      main {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 2rem 1.5rem 3rem;
+      }
 
-  .grid-label {
-    font-family: 'Economica', sans-serif;
-    font-size: 0.85rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #7a5800;
-    margin-bottom: 1.5rem;
-  }
+      .grid-label {
+        font-family: "Economica", sans-serif;
+        font-size: 0.85rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #7a5800;
+        margin-bottom: 1.5rem;
+      }
 
-  .product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
-    gap: 1.5rem;
-  }
+      .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+        gap: 1.5rem;
+      }
 
-  /* ── Card ── */
-  .card {
-    background: rgb(253, 251, 245);
-    border: 0.5px solid rgba(245, 216, 0, 0.5);
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-    position: relative;
-  }
+      /* ── Card ── */
+      .card {
+        background: rgb(253, 251, 245);
+        border: 0.5px solid rgba(245, 216, 0, 0.5);
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease,
+          border-color 0.3s ease;
+        position: relative;
+      }
 
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-    border-color: #ffeb3b;
-  }
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        border-color: #ffeb3b;
+      }
 
-  .photo-placeholder {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    background: linear-gradient(135deg, #f5e2a4 0%, #fef0f0 100%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    color: #b0955a;
-  }
+      .photo-placeholder {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        background: linear-gradient(135deg, #f5e2a4 0%, #fef0f0 100%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        color: #b0955a;
+      }
 
-  .photo-placeholder svg {
-    width: 32px;
-    height: 32px;
-    stroke: #b0955a;
-    fill: none;
-    stroke-width: 1.2;
-  }
+      .photo-placeholder svg {
+        width: 32px;
+        height: 32px;
+        stroke: #b0955a;
+        fill: none;
+        stroke-width: 1.2;
+      }
 
-  .photo-placeholder span {
-    font-family: 'Economica', sans-serif;
-    font-size: 0.8rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #b0955a;
-  }
+      .photo-placeholder span {
+        font-family: "Economica", sans-serif;
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #b0955a;
+      }
 
-  .card-body {
-    padding: 14px 16px 18px;
-    border-top: 1px solid rgba(245, 216, 0, 0.4);
-  }
+      .card img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
 
-  .product-name {
-    font-family: Georgia, 'Times New Roman', serif;
-    font-size: 1rem;
-    font-weight: normal;
-    color: #2c1810;
-    margin-bottom: 4px;
-  }
+      .product-section {
+        margin-bottom: 3rem;
+      }
 
-  .product-desc {
-    font-family: 'Economica', sans-serif;
-    font-size: 0.9rem;
-    color: #5a4a3a;
-    line-height: 1.4;
-    margin-bottom: 10px;
-  }
+      /* Second shape-band sits below the first */
+      .product-grid + .product-grid {
+        margin-top: 1.5rem;
+      }
 
-  .product-price {
-    font-family: 'Economica', sans-serif;
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #b8860b;
-  }
+      .card-body {
+        padding: 14px 16px 18px;
+        border-top: 1px solid rgba(245, 216, 0, 0.4);
+      }
 
-  /* ── Footer ── */
-  footer {
-    text-align: center;
-    padding: 1.5rem;
-    background: rgb(247, 226, 181);
-    border-top: 1px solid rgba(245, 216, 0, 0.4);
-    font-family: 'Economica', sans-serif;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-    color: #7a5800;
-  }
+      .product-name {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #2c1810;
+        margin-bottom: 4px;
+      }
 
-  /* ── Responsive ── */
-  @media (max-width: 600px) {
-    .shop-name { font-size: 1.9rem; }
-    .nav-inner { gap: 0; padding: 0.4rem 0.5rem; }
-    nav a { font-size: 0.95rem; padding: 0.4rem 0.6rem; }
-    .product-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 1rem; }
-  }
-</style>
-</head>
-<body>
+      .product-desc {
+        font-family: "Economica", sans-serif;
+        font-size: 0.9rem;
+        color: #5a4a3a;
+        line-height: 1.4;
+        margin-bottom: 10px;
+      }
 
-<header>
-  <div class="shop-name">Your Shop Name</div>
-  <div class="shop-tagline">Handmade with care &nbsp;·&nbsp; Est. 2024</div>
-</header>
+      .product-price {
+        font-family: "Economica", sans-serif;
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #b8860b;
+      }
 
-<nav>
-  <div class="nav-inner">
-    <a href="#all" class="active">All items</a>
-    <a href="#category-a">Category A</a>
-    <a href="#category-b">Category B</a>
-    <a href="#about">About</a>
-  </div>
-</nav>
+      /* ── Clickable multi-image cards ── */
+      .card.clickable {
+        cursor: pointer;
+      }
 
-<main>
-  <div class="grid-label">12 items</div>
-  <div class="product-grid">
+      .photo-count {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        background: rgba(44, 24, 16, 0.72);
+        color: #fdfbf5;
+        font-family: "Economica", sans-serif;
+        font-size: 0.85rem;
+        letter-spacing: 0.5px;
+        padding: 3px 9px;
+        border-radius: 20px;
+        pointer-events: none;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+      }
 
-    <div class="card">
-      <div class="photo-placeholder">
-        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-        <span>photo</span>
+      /* ── Item detail modal ── */
+      .modal-overlay {
+        position: fixed;
+        inset: 0;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1.5rem;
+        background: rgba(44, 24, 16, 0.6);
+        backdrop-filter: blur(4px);
+        opacity: 0;
+        visibility: hidden;
+        transition:
+          opacity 0.25s ease,
+          visibility 0.25s ease;
+      }
+
+      .modal-overlay.open {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .modal {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1.3fr 1fr;
+        width: 100%;
+        max-width: 900px;
+        max-height: 90vh;
+        overflow-y: auto;
+        background: rgb(253, 251, 245);
+        border: 1px solid rgba(245, 216, 0, 0.5);
+        border-radius: 18px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+        transform: translateY(12px) scale(0.98);
+        transition: transform 0.25s ease;
+      }
+
+      .modal-overlay.open .modal {
+        transform: none;
+      }
+
+      .modal-close {
+        position: absolute;
+        top: 12px;
+        right: 14px;
+        z-index: 2;
+        width: 34px;
+        height: 34px;
+        border: none;
+        border-radius: 50%;
+        background: rgba(44, 24, 16, 0.75);
+        color: #fff;
+        font-size: 1.2rem;
+        line-height: 1;
+        cursor: pointer;
+        transition:
+          background 0.2s ease,
+          transform 0.2s ease;
+      }
+
+      .modal-close:hover {
+        background: #2c1810;
+        transform: scale(1.08);
+      }
+
+      .modal-gallery {
+        padding: 1.25rem;
+        border-right: 1px solid rgba(245, 216, 0, 0.4);
+      }
+
+      .modal-main-img {
+        display: block;
+        width: 100%;
+        max-height: 60vh;
+        object-fit: contain;
+        border-radius: 12px;
+        background: linear-gradient(135deg, #f5e2a4 0%, #fef0f0 100%);
+      }
+
+      .modal-thumbs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 12px;
+      }
+
+      .modal-thumbs img {
+        width: 64px;
+        height: 64px;
+        object-fit: cover;
+        border-radius: 8px;
+        cursor: pointer;
+        border: 2px solid transparent;
+        opacity: 0.7;
+        transition:
+          opacity 0.2s ease,
+          border-color 0.2s ease;
+      }
+
+      .modal-thumbs img:hover {
+        opacity: 1;
+      }
+
+      .modal-thumbs img.active {
+        opacity: 1;
+        border-color: #ffeb3b;
+      }
+
+      .modal-details {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 2rem 1.75rem;
+      }
+
+      .modal-details h2 {
+        font-family: Georgia, "Times New Roman", serif;
+        font-weight: normal;
+        font-size: 1.8rem;
+        color: #996f05;
+        margin-bottom: 0.5rem;
+      }
+
+      .modal-desc {
+        font-family: "Economica", sans-serif;
+        font-size: 1.05rem;
+        color: #5a4a3a;
+        line-height: 1.5;
+        margin-bottom: 1rem;
+      }
+
+      .modal-price {
+        font-family: "Economica", sans-serif;
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: #b8860b;
+      }
+
+      @media (max-width: 700px) {
+        .modal {
+          grid-template-columns: 1fr;
+        }
+        .modal-gallery {
+          border-right: none;
+          border-bottom: 1px solid rgba(245, 216, 0, 0.4);
+        }
+        .modal-details {
+          padding: 1.5rem;
+        }
+      }
+
+      /* ── Footer ── */
+      footer {
+        text-align: center;
+        padding: 1.5rem;
+        background: rgb(247, 226, 181);
+        border-top: 1px solid rgba(245, 216, 0, 0.4);
+        font-family: "Economica", sans-serif;
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+        color: #7a5800;
+      }
+
+      /* ── Responsive ── */
+      @media (max-width: 600px) {
+        .shop-name {
+          font-size: 1.9rem;
+        }
+        .nav-inner {
+          gap: 0;
+          padding: 0.4rem 0.5rem;
+        }
+        nav a {
+          font-size: 0.95rem;
+          padding: 0.4rem 0.6rem;
+        }
+        .product-grid {
+          grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+          gap: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="shop-name">Song Garden E-yard Sale</div>
+      <div class="shop-tagline">Everything must go!</div>
+    </header>
+
+    <nav>
+      <div class="nav-inner">
+        <a href="#all" class="active">All items</a>
+        <a href="#category-a">For Sale</a>
+        <a href="#category-b">Make an offer</a>
       </div>
-      <div class="card-body">
-        <div class="product-name">Product name</div>
-        <div class="product-desc">Short description of this item goes here</div>
-        <div class="product-price">$24.00</div>
+    </nav>
+
+    <main>
+      <section id="all"></section>
+
+      <section id="category-a" class="product-section">
+        <div class="grid-label">For Sale · 8 items</div>
+
+        <!-- Landscape band -->
+        <div class="product-grid">
+          <div class="card for-sale" data-item="kitchen-hutch">
+            <img
+              src="pics/for-sale/kitchen-hutch.jpeg"
+              alt="Kitchen Hutch"
+              loading="lazy"
+            />
+            <div class="card-body">
+              <div class="product-name">Kitchen & Hutch</div>
+              <div class="product-desc">Built for kids</div>
+              <div class="product-price">$75 each</div>
+            </div>
+          </div>
+
+          <div class="card for-sale" data-item="ladybug-swing">
+            <img
+              src="pics/for-sale/ladybug-swing.jpeg"
+              alt="Ladybug Swing"
+              loading="lazy"
+            />
+            <div class="card-body">
+              <div class="product-name">Ladybug Swing</div>
+              <div class="product-desc">Wooden, portable</div>
+              <div class="product-price">$35</div>
+            </div>
+          </div>
+
+          <div class="card for-sale">
+            <img
+              src="pics/for-sale/water-stands.jpeg"
+              alt="Water Stands"
+              loading="lazy"
+            />
+            <div class="card-body">
+              <div class="product-name">Water Stands</div>
+              <div class="product-desc">Includes one porcelain dispenser</div>
+              <div class="product-price">$50</div>
+            </div>
+          </div>
+
+          <div class="card for-sale" data-item="loft-table">
+            <img
+              src="pics/for-sale/loft-table.JPG"
+              alt="Loft and Table"
+              loading="lazy"
+            />
+            <div class="card-body">
+              <div class="product-name">Loft & Table</div>
+              <div class="product-desc">Each sold separately</div>
+              <div class="product-price">Loft: $2,000 Table: $100</div>
+            </div>
+          </div>
+
+          <div class="card for-sale">
+            <img
+              src="pics/for-sale/hutch-large.jpeg"
+              alt="Large Hutch"
+              loading="lazy"
+            />
+            <div class="card-body">
+              <div class="product-name">Large Hutch</div>
+              <div class="product-desc">4’ x 1’ 6.5” x 4’ 6” (L x W x H)</div>
+              <div class="product-price">$200</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Portrait band -->
+        <div class="product-grid">
+          <div class="card for-sale" data-item="story-stools">
+            <img
+              src="pics/for-sale/story-stools.jpeg"
+              alt="Story Stools"
+              loading="lazy"
+            />
+            <div class="card-body">
+              <div class="product-name">Story Stools</div>
+              <div class="product-desc">Set of 15</div>
+              <div class="product-price">$35 ea.</div>
+            </div>
+          </div>
+
+          <div class="card for-sale" data-item="water-table">
+            <img
+              src="pics/for-sale/water-table-open.jpeg"
+              alt="Water/Bean Table"
+              loading="lazy"
+            />
+            <div class="card-body">
+              <div class="product-name">Water/Bean Table</div>
+              <div class="product-desc">
+                Use outdoor with water, indoors with beans
+              </div>
+              <div class="product-price">$50</div>
+            </div>
+          </div>
+
+          <div class="card for-sale" data-item="wooden-truck">
+            <img
+              src="pics/for-sale/wooden-truck-open.jpeg"
+              alt="Wooden Truck"
+              loading="lazy"
+            />
+            <div class="card-body">
+              <div class="product-name">Wooden Truck</div>
+              <div class="product-desc">Strong enough for kids to mount</div>
+              <div class="product-price">$20</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="category-b" class="product-section">
+        <div class="grid-label">Make an Offer · 23 items</div>
+
+        <!-- Landscape band -->
+        <div class="product-grid">
+          <div class="card make-an-offer">
+            <img
+              src="pics/make-an-offer/assorted-art-supplies.jpeg"
+              alt="Assorted Art Supplies"
+              loading="lazy"
+            />
+            <div class="card-body">
+              <div class="product-name">Assorted Art Supplies</div>
+              <div class="product-price">Make an offer</div>
+            </div>
+          </div>
+
+          <div class="card make-an-offer">
+            <img
+              src="pics/make-an-offer/assorted-wooden-toys.jpeg"
+              alt="Assorted Wooden Toys"
+              loading="lazy"
+            />
+            <div class="card-body">
+              <div class="product-name">Assorted Wooden Toys</div>
+              <div class="product-price">Make an offer</div>
+            </div>
+          </div>
+
+          <div class="card make-an-offer" data-item="barn">
+            <img src="pics/make-an-offer/barn.jpeg" alt="Barn" loading="lazy" />
+            <div class="card-body">
+              <div class="product-name">Barn</div>
+              <div class="product-price">Make an offer</div>
+            </div>
+          </div>
+
+          <div class="card make-an-offer">
+            <img
+              src="pics/make-an-offer/crowns.jpeg"
+              alt="Crowns"
+              loading="lazy"
+            />
+            <div class="card-body">
+              <div class="product-name">Crowns</div>
+              <div class="product-price">Make an offer</div>
+            </div>
+          </div>
+
+          <div class="card make-an-offer">
+            <img src="pics/make-an-offer/drum.jpeg" alt="Drum" loading="lazy" />
+            <div class="card-body">
+              <div class="product-name">Drum</div>
+              <div class="product-price">Make an offer</div>
+            </div>
+          </div>
+
+          <div class="card make-an-offer" data-item="kids-iron">
+            <img
+              src="pics/make-an-offer/kids-iron.jpeg"
+              alt="Kids Iron"
+              loading="lazy"
+            />
+            <div class="card-body">
+              <div class="product-name">Kids Iron</div>
+              <div class="product-price">Make an offer</div>
+            </div>
+          </div>
+
+          <div class="card make-an-offer">
+            <img
+              src="pics/make-an-offer/painting-jars.jpeg"
+              alt="Painting Jars"
+              loading="lazy"
+            />
+            <div class="card-body">
+              <div class="product-name">Painting Jars</div>
+              <div class="product-price">Make an offer</div>
+            </div>
+          </div>
+
+          <div class="card make-an-offer" data-item="sandbox-toys">
+            <img
+              src="pics/make-an-offer/sandbox-toys.jpeg"
+              alt="Sandbox Toys"
+              loading="lazy"
+            />
+            <div class="card-body">
+              <div class="product-name">Sandbox Toys</div>
+              <div class="product-price">Make an offer</div>
+            </div>
+          </div>
+
+          <div class="card make-an-offer" data-item="sandbox-truck">
+            <img
+              src="pics/make-an-offer/sandbox-truck.jpeg"
+              alt="Sandbox Truck"
+              loading="lazy"
+            />
+            <div class="card-body">
+              <div class="product-name">Sandbox Truck</div>
+              <div class="product-price">Make an offer</div>
+            </div>
+          </div>
+
+          <div class="card make-an-offer" data-item="wood-blocks">
+            <img
+              src="pics/make-an-offer/wood-blocks.jpeg"
+              alt="Wood Blocks"
+              loading="lazy"
+            />
+            <div class="card-body">
+              <div class="product-name">Wood Blocks</div>
+              <div class="product-price">Make an offer</div>
+            </div>
+          </div>
+
+          <div class="card make-an-offer">
+            <img
+              src="pics/make-an-offer/wooden-animals-assorted.jpeg"
+              alt="Assorted Wooden Animals"
+              loading="lazy"
+            />
+            <div class="card-body">
+              <div class="product-name">Assorted Wooden Animals</div>
+              <div class="product-price">Make an offer</div>
+            </div>
+          </div>
+
+          <div class="card make-an-offer">
+            <img
+              src="pics/make-an-offer/wooden-clips.jpeg"
+              alt="Wooden Clips"
+              loading="lazy"
+            />
+            <div class="card-body">
+              <div class="product-name">Wooden Clips</div>
+              <div class="product-price">Make an offer</div>
+            </div>
+          </div>
+
+          <div class="card make-an-offer" data-item="wooden-coathooks">
+            <img
+              src="pics/make-an-offer/wooden-coathooks.jpeg"
+              alt="Wooden Coat Hooks"
+              loading="lazy"
+            />
+            <div class="card-body">
+              <div class="product-name">Wooden Coat Hooks</div>
+              <div class="product-price">Make an offer</div>
+            </div>
+          </div>
+
+          <div class="card make-an-offer">
+            <img
+              src="pics/make-an-offer/wooden-kitchen-toys.jpeg"
+              alt="Wooden Kitchen Toys"
+              loading="lazy"
+            />
+            <div class="card-body">
+              <div class="product-name">Wooden Kitchen Toys</div>
+              <div class="product-price">Make an offer</div>
+            </div>
+          </div>
+
+          <div class="card make-an-offer">
+            <img
+              src="pics/make-an-offer/wooden-trailer.jpeg"
+              alt="Wooden Trailer"
+              loading="lazy"
+            />
+            <div class="card-body">
+              <div class="product-name">Wooden Trailer</div>
+              <div class="product-price">Make an offer</div>
+            </div>
+          </div>
+
+          <div class="card make-an-offer">
+            <img
+              src="pics/make-an-offer/wooden-train.jpeg"
+              alt="Wooden Train"
+              loading="lazy"
+            />
+            <div class="card-body">
+              <div class="product-name">Wooden Train</div>
+              <div class="product-price">Make an offer</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Portrait band -->
+        <div class="product-grid">
+          <div class="card make-an-offer">
+            <img src="pics/make-an-offer/doll.jpeg" alt="Doll" loading="lazy" />
+            <div class="card-body">
+              <div class="product-name">Doll</div>
+              <div class="product-price">Make an offer</div>
+            </div>
+          </div>
+
+          <div class="card make-an-offer">
+            <img
+              src="pics/make-an-offer/percussion-instruments.jpeg"
+              alt="Percussion Instruments"
+              loading="lazy"
+            />
+            <div class="card-body">
+              <div class="product-name">Percussion Instruments</div>
+              <div class="product-price">Make an offer</div>
+            </div>
+          </div>
+
+          <div class="card make-an-offer">
+            <img
+              src="pics/make-an-offer/picnic-set.jpeg"
+              alt="Picnic Set"
+              loading="lazy"
+            />
+            <div class="card-body">
+              <div class="product-name">Picnic Set</div>
+              <div class="product-price">Make an offer</div>
+            </div>
+          </div>
+
+          <div class="card make-an-offer">
+            <img
+              src="pics/make-an-offer/ribbons.jpeg"
+              alt="Ribbons"
+              loading="lazy"
+            />
+            <div class="card-body">
+              <div class="product-name">Ribbons</div>
+              <div class="product-price">Make an offer</div>
+            </div>
+          </div>
+
+          <div class="card make-an-offer">
+            <img
+              src="pics/make-an-offer/wooden-bowling-pins.jpeg"
+              alt="Wooden Bowling Pins"
+              loading="lazy"
+            />
+            <div class="card-body">
+              <div class="product-name">Wooden Bowling Pins</div>
+              <div class="product-price">Make an offer</div>
+            </div>
+          </div>
+
+          <div class="card make-an-offer">
+            <img
+              src="pics/make-an-offer/wooden-ladder-ramp.jpeg"
+              alt="Wooden Ladder Ramp"
+              loading="lazy"
+            />
+            <div class="card-body">
+              <div class="product-name">Wooden Ladder Ramp</div>
+              <div class="product-price">Make an offer</div>
+            </div>
+          </div>
+
+          <div class="card make-an-offer">
+            <img
+              src="pics/make-an-offer/wooden-platter.jpeg"
+              alt="Wooden Platter"
+              loading="lazy"
+            />
+            <div class="card-body">
+              <div class="product-name">Wooden Platter</div>
+              <div class="product-price">Make an offer</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Item detail modal -->
+    <div class="modal-overlay" id="itemModal" aria-hidden="true">
+      <div
+        class="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalTitle"
+      >
+        <button class="modal-close" id="modalClose" aria-label="Close">
+          &times;
+        </button>
+        <div class="modal-gallery">
+          <img class="modal-main-img" id="modalMainImg" src="" alt="" />
+          <div class="modal-thumbs" id="modalThumbs"></div>
+        </div>
+        <div class="modal-details">
+          <h2 id="modalTitle"></h2>
+          <div class="modal-desc" id="modalDesc"></div>
+          <div class="modal-price" id="modalPrice"></div>
+        </div>
       </div>
     </div>
 
-    <div class="card">
-      <div class="photo-placeholder">
-        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-        <span>photo</span>
-      </div>
-      <div class="card-body">
-        <div class="product-name">Product name</div>
-        <div class="product-desc">Short description of this item goes here</div>
-        <div class="product-price">$18.00</div>
-      </div>
-    </div>
+    <footer>© 2025 Your Shop Name &nbsp;·&nbsp; All rights reserved</footer>
 
-    <div class="card">
-      <div class="photo-placeholder">
-        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-        <span>photo</span>
-      </div>
-      <div class="card-body">
-        <div class="product-name">Product name</div>
-        <div class="product-desc">Short description of this item goes here</div>
-        <div class="product-price">$32.00</div>
-      </div>
-    </div>
+    <script>
+      // Extra photos per multi-image item. The card supplies name/price/desc;
+      // this map supplies the full gallery (first entry is the cover photo).
+      const GALLERIES = {
+        "kitchen-hutch": [
+          ["pics/for-sale/kitchen-hutch.jpeg", "Kitchen & Hutch"],
+          ["pics/for-sale/kitchen.jpeg", "Kitchen"],
+          ["pics/for-sale/small-hutch.jpeg", "Small Hutch"],
+        ],
+        "ladybug-swing": [
+          ["pics/for-sale/ladybug-swing.jpeg", "Ladybug Swing"],
+          ["pics/for-sale/ladybug-2.jpeg", "Ladybug Swing — another view"],
+        ],
+        "story-stools": [
+          ["pics/for-sale/story-stools.jpeg", "Story Stools"],
+          [
+            "pics/for-sale/story-stools-individual.jpeg",
+            "Story Stool — individual",
+          ],
+        ],
+        "water-table": [
+          ["pics/for-sale/water-table-open.jpeg", "Water/Bean Table — lid off"],
+          [
+            "pics/for-sale/water-table-closed.jpeg",
+            "Water/Bean Table — lid on",
+          ],
+          [
+            "pics/for-sale/water-table-3.jpeg",
+            "Water/Bean Table — another view",
+          ],
+        ],
+        "wooden-truck": [
+          ["pics/for-sale/wooden-truck-open.jpeg", "Wooden Truck"],
+          ["pics/for-sale/wooden-truck-2.jpeg", "Wooden Truck — another view"],
+          ["pics/for-sale/wooden-truck-3.jpeg", "Wooden Truck — another view"],
+        ],
+        "loft-table": [
+          ["pics/for-sale/loft-table.JPG", "Loft & Table"],
+          ["pics/for-sale/loft-table-2.jpg", "Loft & Table — another view"],
+          ["pics/for-sale/loft-3.JPG", "Loft — another view"],
+        ],
+        barn: [
+          ["pics/make-an-offer/barn.jpeg", "Barn"],
+          ["pics/make-an-offer/barn-2.jpeg", "Barn — another view"],
+          ["pics/make-an-offer/barn-3.jpeg", "Barn — another view"],
+        ],
+        "wood-blocks": [
+          ["pics/make-an-offer/wood-blocks.jpeg", "Wood Blocks"],
+          ["pics/make-an-offer/wood-blocks-open.jpeg", "Wood Blocks — open"],
+        ],
+        "sandbox-toys": [
+          ["pics/make-an-offer/sandbox-toys.jpeg", "Sandbox Toys"],
+          [
+            "pics/make-an-offer/sandbox-toys-2.jpeg",
+            "Sandbox Toys — another view",
+          ],
+        ],
+        "sandbox-truck": [
+          ["pics/make-an-offer/sandbox-truck.jpeg", "Sandbox Truck"],
+          [
+            "pics/make-an-offer/sandbox-truck-2.jpeg",
+            "Sandbox Truck — another view",
+          ],
+          [
+            "pics/make-an-offer/sandbox-truck-3.jpeg",
+            "Sandbox Truck — another view",
+          ],
+        ],
+        "wooden-coathooks": [
+          ["pics/make-an-offer/wooden-coathooks.jpeg", "Wooden Coat Hooks"],
+          [
+            "pics/make-an-offer/wooden-coathooks-2.jpeg",
+            "Wooden Coat Hooks — another view",
+          ],
+        ],
+        "kids-iron": [
+          ["pics/make-an-offer/kids-iron.jpeg", "Kids Iron"],
+          ["pics/make-an-offer/kids-iron-2.jpeg", "Kids Iron — another view"],
+        ],
+      };
 
-    <div class="card">
-      <div class="photo-placeholder">
-        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-        <span>photo</span>
-      </div>
-      <div class="card-body">
-        <div class="product-name">Product name</div>
-        <div class="product-desc">Short description of this item goes here</div>
-        <div class="product-price">$14.00</div>
-      </div>
-    </div>
+      const overlay = document.getElementById("itemModal");
+      const mainImg = document.getElementById("modalMainImg");
+      const thumbs = document.getElementById("modalThumbs");
+      const titleEl = document.getElementById("modalTitle");
+      const descEl = document.getElementById("modalDesc");
+      const priceEl = document.getElementById("modalPrice");
 
-    <div class="card">
-      <div class="photo-placeholder">
-        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-        <span>photo</span>
-      </div>
-      <div class="card-body">
-        <div class="product-name">Product name</div>
-        <div class="product-desc">Short description of this item goes here</div>
-        <div class="product-price">$45.00</div>
-      </div>
-    </div>
+      function setMain(src, alt) {
+        mainImg.src = src;
+        mainImg.alt = alt || "";
+        thumbs.querySelectorAll("img").forEach((t) => {
+          t.classList.toggle("active", t.dataset.src === src);
+        });
+      }
 
-    <div class="card">
-      <div class="photo-placeholder">
-        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-        <span>photo</span>
-      </div>
-      <div class="card-body">
-        <div class="product-name">Product name</div>
-        <div class="product-desc">Short description of this item goes here</div>
-        <div class="product-price">$28.00</div>
-      </div>
-    </div>
+      function openModal(card) {
+        // Use the item's gallery if it has one; otherwise fall back to the
+        // card's own single image so every card can open larger.
+        let imgs = GALLERIES[card.dataset.item];
+        if (!imgs) {
+          const img = card.querySelector("img");
+          if (!img) return;
+          imgs = [[img.getAttribute("src"), img.getAttribute("alt") || ""]];
+        }
 
-    <div class="card">
-      <div class="photo-placeholder">
-        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-        <span>photo</span>
-      </div>
-      <div class="card-body">
-        <div class="product-name">Product name</div>
-        <div class="product-desc">Short description of this item goes here</div>
-        <div class="product-price">$22.00</div>
-      </div>
-    </div>
+        titleEl.textContent = card.querySelector(".product-name").textContent;
+        const descNode = card.querySelector(".product-desc");
+        descEl.textContent = descNode ? descNode.textContent.trim() : "";
+        descEl.style.display = descNode ? "" : "none";
+        priceEl.textContent = card.querySelector(".product-price").textContent;
 
-    <div class="card">
-      <div class="photo-placeholder">
-        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-        <span>photo</span>
-      </div>
-      <div class="card-body">
-        <div class="product-name">Product name</div>
-        <div class="product-desc">Short description of this item goes here</div>
-        <div class="product-price">$36.00</div>
-      </div>
-    </div>
+        thumbs.innerHTML = "";
+        imgs.forEach(([src, alt]) => {
+          const t = document.createElement("img");
+          t.src = src;
+          t.alt = alt || "";
+          t.loading = "lazy";
+          t.dataset.src = src;
+          t.addEventListener("click", () => setMain(src, alt));
+          thumbs.appendChild(t);
+        });
+        thumbs.style.display = imgs.length > 1 ? "" : "none";
+        setMain(imgs[0][0], imgs[0][1]);
 
-    <div class="card">
-      <div class="photo-placeholder">
-        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-        <span>photo</span>
-      </div>
-      <div class="card-body">
-        <div class="product-name">Product name</div>
-        <div class="product-desc">Short description of this item goes here</div>
-        <div class="product-price">$19.00</div>
-      </div>
-    </div>
+        overlay.classList.add("open");
+        overlay.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+      }
 
-    <div class="card">
-      <div class="photo-placeholder">
-        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-        <span>photo</span>
-      </div>
-      <div class="card-body">
-        <div class="product-name">Product name</div>
-        <div class="product-desc">Short description of this item goes here</div>
-        <div class="product-price">$55.00</div>
-      </div>
-    </div>
+      function closeModal() {
+        overlay.classList.remove("open");
+        overlay.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+      }
 
-    <div class="card">
-      <div class="photo-placeholder">
-        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-        <span>photo</span>
-      </div>
-      <div class="card-body">
-        <div class="product-name">Product name</div>
-        <div class="product-desc">Short description of this item goes here</div>
-        <div class="product-price">$12.00</div>
-      </div>
-    </div>
+      document.querySelectorAll(".card").forEach((card) => {
+        card.classList.add("clickable");
+        const gallery = GALLERIES[card.dataset.item];
+        if (gallery && gallery.length > 1) {
+          const badge = document.createElement("div");
+          badge.className = "photo-count";
+          badge.innerHTML = "<span>📷</span> " + gallery.length;
+          card.appendChild(badge);
+        }
+        card.addEventListener("click", () => openModal(card));
+      });
 
-    <div class="card">
-      <div class="photo-placeholder">
-        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-        <span>photo</span>
-      </div>
-      <div class="card-body">
-        <div class="product-name">Product name</div>
-        <div class="product-desc">Short description of this item goes here</div>
-        <div class="product-price">$40.00</div>
-      </div>
-    </div>
-
-  </div>
-</main>
-
-<footer>© 2025 Your Shop Name &nbsp;·&nbsp; All rights reserved</footer>
-
-</body>
+      document
+        .getElementById("modalClose")
+        .addEventListener("click", closeModal);
+      overlay.addEventListener("click", (e) => {
+        if (e.target === overlay) closeModal();
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeModal();
+      });
+    </script>
+  </body>
 </html>
