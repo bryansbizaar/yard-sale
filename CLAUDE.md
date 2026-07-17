@@ -12,7 +12,7 @@ A single-page static HTML shop for listing yard sale / secondhand items for sale
 ## File Structure
 ```
 yard-sale/
-├── shop-wireframe.html       # Main HTML file (all styles inline)
+├── index.html                # Main HTML file (all styles inline)
 ├── CLAUDE.md                 # This file
 └── pics/
     ├── for-sale/             # Items with fixed prices
