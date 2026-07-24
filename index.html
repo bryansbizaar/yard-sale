@@ -444,16 +444,29 @@
 
         <!-- Landscape band -->
         <div class="product-grid">
-          <div class="card for-sale" data-item="kitchen-hutch">
+          <div class="card for-sale">
             <img
-              src="pics/for-sale/kitchen-hutch.jpeg"
-              alt="Kitchen Hutch"
+              src="pics/for-sale/small-hutch.jpeg"
+              alt="Small Hutch"
               loading="lazy"
             />
             <div class="card-body">
-              <div class="product-name">Kitchen & Hutch</div>
+              <div class="product-name">Small Hutch</div>
               <div class="product-desc">Built for kids</div>
-              <div class="product-price">$75 each</div>
+              <div class="product-price">$75</div>
+            </div>
+          </div>
+
+          <div class="card for-sale">
+            <img
+              src="pics/for-sale/kitchen.jpeg"
+              alt="Kitchen"
+              loading="lazy"
+            />
+            <div class="card-body">
+              <div class="product-name"><s>Kitchen</s> <em>sold</em></div>
+              <div class="product-desc">Built for kids</div>
+              <div class="product-price"><s>$75</s></div>
             </div>
           </div>
 
@@ -532,11 +545,11 @@
               loading="lazy"
             />
             <div class="card-body">
-              <div class="product-name">Water/Bean Table</div>
+              <div class="product-name"><s>Water/Bean Table</s> <em>sold</em></div>
               <div class="product-desc">
                 Use outdoor with water, indoors with beans
               </div>
-              <div class="product-price">$50</div>
+              <div class="product-price"><s>$50</s></div>
             </div>
           </div>
 
@@ -547,9 +560,9 @@
               loading="lazy"
             />
             <div class="card-body">
-              <div class="product-name">Wooden Truck</div>
+              <div class="product-name"><s>Wooden Truck</s> <em>sold</em></div>
               <div class="product-desc">Strong enough for kids to mount</div>
-              <div class="product-price">$20</div>
+              <div class="product-price"><s>$20</s></div>
             </div>
           </div>
         </div>
@@ -579,8 +592,8 @@
               loading="lazy"
             />
             <div class="card-body">
-              <div class="product-name">Assorted Wooden Toys</div>
-              <div class="product-price">Make an offer</div>
+              <div class="product-name"><s>Assorted Wooden Toys</s> <em>sold</em></div>
+              <div class="product-price"><s>Make an offer</s></div>
             </div>
           </div>
 
@@ -619,8 +632,8 @@
               loading="lazy"
             />
             <div class="card-body">
-              <div class="product-name">Kids Iron</div>
-              <div class="product-price">Make an offer</div>
+              <div class="product-name"><s>Kids Iron</s> <em>sold</em></div>
+              <div class="product-price"><s>Make an offer</s></div>
             </div>
           </div>
 
@@ -667,8 +680,8 @@
               loading="lazy"
             />
             <div class="card-body">
-              <div class="product-name">Wood Blocks</div>
-              <div class="product-price">Make an offer</div>
+              <div class="product-name"><s>Wood Blocks</s> <em>sold</em></div>
+              <div class="product-price"><s>Make an offer</s></div>
             </div>
           </div>
 
@@ -679,8 +692,8 @@
               loading="lazy"
             />
             <div class="card-body">
-              <div class="product-name">Assorted Wooden Animals</div>
-              <div class="product-price">Make an offer</div>
+              <div class="product-name"><s>Assorted Wooden Animals</s> <em>sold</em></div>
+              <div class="product-price"><s>Make an offer</s></div>
             </div>
           </div>
 
@@ -691,8 +704,8 @@
               loading="lazy"
             />
             <div class="card-body">
-              <div class="product-name">Wooden Clips</div>
-              <div class="product-price">Make an offer</div>
+              <div class="product-name"><s>Wooden Clips</s> <em>sold</em></div>
+              <div class="product-price"><s>Make an offer</s></div>
             </div>
           </div>
 
@@ -715,8 +728,8 @@
               loading="lazy"
             />
             <div class="card-body">
-              <div class="product-name">Wooden Kitchen Toys</div>
-              <div class="product-price">Make an offer</div>
+              <div class="product-name"><s>Wooden Kitchen Toys</s> <em>sold</em></div>
+              <div class="product-price"><s>Make an offer</s></div>
             </div>
           </div>
 
@@ -859,11 +872,6 @@
       // Extra photos per multi-image item. The card supplies name/price/desc;
       // this map supplies the full gallery (first entry is the cover photo).
       const GALLERIES = {
-        "kitchen-hutch": [
-          ["pics/for-sale/kitchen-hutch.jpeg", "Kitchen & Hutch"],
-          ["pics/for-sale/kitchen.jpeg", "Kitchen"],
-          ["pics/for-sale/small-hutch.jpeg", "Small Hutch"],
-        ],
         "ladybug-swing": [
           ["pics/for-sale/ladybug-swing.jpeg", "Ladybug Swing"],
           ["pics/for-sale/ladybug-2.jpeg", "Ladybug Swing — another view"],
